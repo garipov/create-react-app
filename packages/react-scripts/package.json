@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
+  "name": "@garipov/react-scripts-ts",
   "version": "2.0.4",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "description": "It's for of Create React App Scripts",
+  "repository": "garipov/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/garipov/create-react-app/issues"
   },
   "files": [
     "bin",
