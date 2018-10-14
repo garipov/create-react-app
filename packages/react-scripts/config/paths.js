@@ -53,7 +53,7 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('src/index.tsx'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   yarnLockFile: resolveApp('yarn.lock'),
@@ -62,6 +62,9 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  tsConfig: resolveApp('tsconfig.json'),
+  tsProdConfig: resolveApp('tsconfig.prod.json'),
+  tsTestConfig: resolveApp('tsconfig.test.json'),
 };
 
 // @remove-on-eject-begin
@@ -74,7 +77,7 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveApp('src/index.js'),
+  appIndexJs: resolveApp('src/index.tsx'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   yarnLockFile: resolveApp('yarn.lock'),
@@ -86,6 +89,9 @@ module.exports = {
   // These properties only exist before ejecting:
   ownPath: resolveOwn('.'),
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
+  tsConfig: resolveApp('tsconfig.json'),
+  tsProdConfig: resolveApp('tsconfig.prod.json'),
+  tsTestConfig: resolveApp('tsconfig.test.json'),
 };
 
 const ownPackageJson = require('../package.json');
@@ -105,7 +111,7 @@ if (
     appBuild: resolveOwn('../../build'),
     appPublic: resolveOwn('template/public'),
     appHtml: resolveOwn('template/public/index.html'),
-    appIndexJs: resolveOwn('template/src/index.js'),
+    appIndexJs: resolveOwn('template/src/index.tsx'),
     appPackageJson: resolveOwn('package.json'),
     appSrc: resolveOwn('template/src'),
     yarnLockFile: resolveOwn('template/yarn.lock'),
@@ -117,6 +123,9 @@ if (
     // These properties only exist before ejecting:
     ownPath: resolveOwn('.'),
     ownNodeModules: resolveOwn('node_modules'),
+    tsConfig: resolveOwn('template/tsconfig.json'),
+    tsProdConfig: resolveOwn('template/tsconfig.prod.json'),
+    tsTestConfig: resolveOwn('template/tsconfig.test.json'),
   };
 }
 // @remove-on-eject-end
